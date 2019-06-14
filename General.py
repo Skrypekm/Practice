@@ -1,11 +1,13 @@
 import math
+import random
 
-isHot = True
-isCold = False
 
-if isHot and not isCold:
-    print("Its hot")
-elif isCold:
-    print("its cold")
-else:
-    print("its not")
+secretNumb = random.randint(1, 9)
+
+guessCount = 0
+guessLimit = 3
+
+while guessCount < guessLimit:
+    guess = int(input("Enter your guess: "))
+    guessCount += 1
+    
