@@ -1,6 +1,6 @@
 import random
 
-
+# generates a random number between 1 and 9
 secretNumb = random.randint(1, 9)
 
 guessCount = 0
@@ -14,7 +14,7 @@ while goAgain:
         guessCount += 1
         if guess == secretNumb:
             print(F"You guess correct. The number was {secretNumb}")
-            break;
+            break
         elif guess > secretNumb:
             print("Your guess was too high")
         elif guess < secretNumb:
@@ -27,5 +27,5 @@ while goAgain:
     i = input("Would you like to go again (y/n): ")
     if i.upper() == "N":
         goAgain = False
-    
-    
+
+exit(0)

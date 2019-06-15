@@ -1,6 +1,5 @@
 import random
 
-
 secretNumb = random.randint(1, 9)
 
 guessCount = 0
@@ -27,5 +26,5 @@ while goAgain:
     i = input("Would you like to go again (y/n): ")
     if i.upper() == "N":
         goAgain = False
-    
-    
+
+exit(0)
