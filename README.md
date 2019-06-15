@@ -1,2 +1,2 @@
 # Practice
-Repository to pratice programming
+This branch is for practicing with python
