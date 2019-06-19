@@ -1,32 +1,31 @@
-# Problem:
-# Read the amount of money you have and the prices of the items you intend to buy. Determine
-# whether you have enough money to buy everything you selected or whether you are short of
-# money. If you do not have enough money, indicate the amount of the shortfall. Be sure to
-# include 8% tax when figuring the amount you need.
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print("Move")
+
+    def draw(self):
+        print(F"x: {self.x}, y: {self.y}")
+
+    val = True
 
 
-num = input("Enter array of numbers: ")
-numArr = num.split(' ')
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-# determine the amount you have and the amount you owe
-first = True
-owed = 0
+    def talk(self):
+        print(F"My name is: {self.name}")
 
-for i in numArr:
-    if first:
-        owned = float(i)
-        first = False
-        continue
-    elif i == "-1":
-        break
 
-    owed += float(i)
+point1 = Point(10, 20)
+point1.draw()
+if point1.val:
+    print("Value is true")
 
-owed += owed * .08  # add tax
-
-if owned > owed:
-    print("ENOUGH MONEY")
-else:
-    print("$" + str(float(owed) - float(owned)) + " SHORT")
-
+# test person class
+pers = Person("Mike")
+pers.talk()
 exit(0)
